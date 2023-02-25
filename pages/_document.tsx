@@ -1,4 +1,4 @@
-import Document, {Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps} from 'next/document';
+import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
 
 export default  class MyDocument extends Document {
     static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
@@ -10,9 +10,9 @@ export default  class MyDocument extends Document {
         return (
             <Html lang="ru">
                 <Head />
-                <body>
-                <Main />
-                <NextScript />
+                <body >
+                    <Main />
+                    <NextScript />
                 </body>
             </Html>
         );
