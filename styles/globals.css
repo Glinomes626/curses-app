@@ -17,6 +17,7 @@
 
 html,
 body {
+	font-weight: 400;
 	color: var(--black);
 	background-color: #F5F6F8;
 }
