@@ -1,0 +1,50 @@
+.title {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 20px;
+    align-items: baseline;
+    justify-items: left;
+}
+
+.hhTitle {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: baseline;
+    justify-items: left;
+}
+
+.seo h1 {
+    font-size: 26px;
+    line-height: 35px;
+}
+
+.seo h2 {
+    margin: 50px 0 25px;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.seo h3 {
+    margin: 50px 0 25px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27px;
+}
+
+.seo h1,
+.seo h2 {
+    font-weight: 500;
+}
+
+.seo ul {
+    padding-left: 40px;
+}
+
+.seo ul > *:not(:last-child) {
+    margin-bottom: 13px;
+}
+
+.seo p {
+    margin-bottom: 16px;
+}

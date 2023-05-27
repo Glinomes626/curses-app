@@ -5,7 +5,7 @@
             ". header header ."
             ". sidebar body ."
             "footer footer footer footer";
-    gap: 0 30px;
+    gap: 40px 30px;
     min-height: 100vh;
 }
 
@@ -26,7 +26,7 @@
     grid-area: footer;
 }
 
-@media (max-width: 750px) {
+@media screen and (max-width: 750px) {
     .wrapper {
         grid-template-areas:
             "header"
@@ -36,10 +36,14 @@
     }
 
     .sidebar {
-        display: none;
+        display: none !important;
     }
 
     .header {
         display: block;
+    }
+
+    .body {
+        padding: 15px;
     }
 }
