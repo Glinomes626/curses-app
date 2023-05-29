@@ -4,6 +4,7 @@
     gap: 20px;
     align-items: baseline;
     justify-items: left;
+    margin-bottom: 30px;
 }
 
 .hhTitle {
@@ -47,4 +48,14 @@
 
 .seo p {
     margin-bottom: 16px;
+}
+
+@media screen and (max-width: 1030px){
+    .title {
+        grid-template-columns: auto 1fr;
+    }
+
+    .tag {
+        margin-bottom: 5px;
+    }
 }

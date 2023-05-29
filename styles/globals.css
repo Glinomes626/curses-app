@@ -8,6 +8,8 @@
 	--primary-hover: #6344Df;
 	--green-light: #C8F8E4;
 	--gray-dark: #787D85;
+	--gray: #A4A4A4;
+	--font-family: '__Noto_Sans_3d2c5e', '__Noto_Sans_Fallback_3d2c5e';
 }
 
 * {
