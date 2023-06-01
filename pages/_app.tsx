@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
                 {`
                     html {
                         font-family: ${notSans.style.fontFamily};
-                    }
+                    }        
                 `}
             </style>
         </Head>
