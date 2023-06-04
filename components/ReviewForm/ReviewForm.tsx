@@ -33,8 +33,10 @@ export const ReviewForm = ({ productId, className,...props }: ReviewFormProps): 
             } else {
                 setIsError('Что-то пошло не так');
             }
-        } catch (error: any) {
-            setIsError(error.message);
+        } catch (error) {
+            if (error instanceof Error) {
+                setIsError(error.message);
+            }
         }
     };
 
@@ -44,6 +46,7 @@ export const ReviewForm = ({ productId, className,...props }: ReviewFormProps): 
                  {...props}
             >
                 <Input
+                    className={styles.input}
                     placeholder="Имя"
                     {...register('name', { required: { value: true, message: 'Заполните имя' } })}
                     error={errors.name}
@@ -95,4 +98,4 @@ export const ReviewForm = ({ productId, className,...props }: ReviewFormProps): 
             </div>}
         </form>
     );
-}
+};

@@ -8,14 +8,20 @@ import { declOfNum, priceRu } from "../../helpers/helpers";
 import { Divider } from "../Divider/Divider";
 import Image from "next/image";
 import clNa from "classnames";
-import { useRef, useState } from "react";
+import { ForwardedRef, forwardRef, useRef, useState } from "react";
 import { Review } from "../Review/Review";
 import { ReviewForm } from "../ReviewForm/ReviewForm";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
-export const Product = ({ product, className, ...props }: ProductProps): JSX.Element => {
+export const Product = motion(forwardRef(({ product, className, ...props }: ProductProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
     const [isReviewOpened, setReviewOpened] = useState<boolean>(false);
     const reviewRef = useRef<HTMLDivElement>(null);
+
+    const variants = {
+        visible: { opacity: 1, height: 'auto' },
+        hidden: { opacity: 0, height: 0 }
+    };
 
     const scrollToReview = () => {
         setReviewOpened(true);
@@ -26,7 +32,7 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
     };
 
     return (
-        <div className={className} {...props}>
+        <div className={className} {...props} ref={ref}>
             <Card className={styles.product}>
                 <div className={styles.logo}>
                     <Image
@@ -48,7 +54,9 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
                 <div className={styles.tag}>{product.categories.map(c => <Tag className={styles.category} key={c} color='ghost'>{c}</Tag>)}</div>
                 <div className={styles.priceTitle}>цена</div>
                 <div className={styles.creditTitle}>Кредит</div>
-                <div className={styles.rateTitle}><Link href='#ref' onClick={scrollToReview}>{product.reviewCount} {declOfNum(product.reviewCount, ['отзыв', 'отзыва', 'отзывов'])}</Link></div>
+                <div className={styles.rateTitle}>
+                    <Link href={'#ref'} onClick={scrollToReview}>{product.reviewCount} {declOfNum(product.reviewCount, ['отзыв', 'отзыва', 'отзывов'])}</Link>
+                </div>
                 <Divider className={styles.hr}/>
                 <div className={styles.description}>{product.description}</div>
                 <div className={styles.feature}>
@@ -82,18 +90,24 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
                     </Button>
                 </div>
             </Card>
-            <Card color='blue' className={clNa(styles.reviews, {
-                [styles.opened]: isReviewOpened,
-                [styles.closed]: !isReviewOpened
-            })} ref={reviewRef}>
-                {product.reviews.map(r => (
-                    <div key={r._id}>
-                        <Review review={r}/>
-                        <Divider />
-                    </div>
-                ))}
-                <ReviewForm productId={product._id} />
-            </Card>
+            <motion.div
+                animate={isReviewOpened ? 'visible' : 'hidden'}
+                variants={variants}
+                initial='hidden'
+            >
+                <Card className={styles.reviews}
+                      color='blue'
+                      ref={reviewRef}
+                >
+                    {product.reviews.map(r => (
+                        <div key={r._id}>
+                            <Review review={r}/>
+                            <Divider />
+                        </div>
+                    ))}
+                    <ReviewForm productId={product._id} />
+                </Card>
+            </motion.div>
         </div>
     );
-}
+}));

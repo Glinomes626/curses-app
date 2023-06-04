@@ -4,10 +4,6 @@
     padding: 30px;
 }
 
-.product:not(:first-child) {
-  margin: 20px 0 0;
-}
-
 .logo {
     grid-row: 1 / span 2;
     grid-column: start / logoend;
@@ -43,6 +39,7 @@
 .feature {
     grid-column: start / middle;
 }
+
 .advBlock {
     grid-column: middle / end;
 }
@@ -158,14 +155,8 @@
     border-bottom: 1px dashed var(--green-light);
 }
 
-.closed {
-    max-height: 0;
-    padding: 0;
+.reviews {
     overflow: hidden;
-}
-
-.opened {
-    max-height: 100%;
     padding: 30px;
 }
 

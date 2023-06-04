@@ -2,13 +2,17 @@ import { ButtonProps } from './Button.props';
 import styles from './Button.module.css';
 import ArrowIcon from  './arrow.svg';
 import clNa from "classnames";
+import { motion } from "framer-motion";
 
 export const Button = ({ appearance, children, arrow = 'none', className, ...props }: ButtonProps): JSX.Element => {
     return (
-        <button className={clNa(styles.button, className, {
-            [styles.primary]: appearance === 'primary',
-            [styles.ghost]: appearance === 'ghost'
-        })}{...props}
+        <motion.button
+            whileHover={{ scale: 1.05 }}
+            className={clNa(styles.button, className, {
+                [styles.primary]: appearance === 'primary',
+                [styles.ghost]: appearance === 'ghost'
+            })}
+            {...props}
         >
             {children}
             {arrow !== 'none' && <span className={clNa(styles.arrow, {
@@ -16,6 +20,6 @@ export const Button = ({ appearance, children, arrow = 'none', className, ...pro
             })}>
                 <ArrowIcon />
             </span>}
-        </button>
+        </motion.button>
     );
 };

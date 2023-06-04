@@ -37,24 +37,20 @@
 }
 
 .secondLevelBlock {
-    display: none;
-}
-
-.secondLevelBlockOpened {
-    display: block;
-}
-
-.secondLevelBlockOpened:last-child {
-    margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .thirdLevel {
-    display: block;
+    display: inline-block;
+    max-width: 180px;
     margin-bottom: 10px;
+    overflow: hidden;
     font-size: 14px;
     font-weight: 500;
     line-height: 19px;
     color: var(--gray-dark);
+    text-overflow: ellipsis;
+    white-space: nowrap;
     cursor: pointer;
 }
 
