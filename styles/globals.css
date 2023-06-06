@@ -4,12 +4,19 @@
 	--white: #FFF;
 	--red-light: #FEA291;
 	--red: #FC836D;
-	--green: #1DC37E;
-	--primary: #7653FC;
+	--green: #127a4f;
+	--primary: #7351f5;
 	--primary-hover: #6344Df;
 	--green-light: #C8F8E4;
-	--gray-dark: #787D85;
+	--gray-dark: #6c7077;
 	--gray: #A4A4A4;
+}
+
+.visualy-hidden {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
 }
 
 * {

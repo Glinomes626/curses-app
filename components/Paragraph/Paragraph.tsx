@@ -13,4 +13,4 @@ export const Paragraph = ({ children, size = 'medium', className, ...props }: Pa
             {children}
         </p>
     );
-}
+};

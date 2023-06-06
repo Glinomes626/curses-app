@@ -13,4 +13,4 @@ export const Sidebar = ({ className,...props }: SidebarProps): JSX.Element => {
             <Menu />
         </div>
     );
-}
+};

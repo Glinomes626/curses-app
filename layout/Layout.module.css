@@ -25,6 +25,22 @@
     grid-area: footer;
 }
 
+.skipLink {
+    position: fixed;
+    top: 0;
+    left: 100px;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    color: var(--white);
+    cursor: pointer;
+    background-color: var(--primary);
+}
+
+.displayed {
+    height: auto;
+}
+
 @media screen and (max-width: 750px) {
     .wrapper {
         grid-template-areas:
@@ -33,10 +49,6 @@
             "footer";
         grid-template-columns: minmax(320px, 1fr);
         gap: 10px;
-    }
-
-    .sidebar {
-        display: none !important;
     }
 
     .header {

@@ -1,7 +1,7 @@
 import { FooterProps } from './Footer.props';
 import styles from './Footer.module.css';
 import clNa from "classnames";
-import {format} from "date-fns";
+import { format } from "date-fns";
 
 export const Footer = ({ className,...props }: FooterProps): JSX.Element => {
     return (
@@ -13,4 +13,4 @@ export const Footer = ({ className,...props }: FooterProps): JSX.Element => {
             <a href="#" target="_blank">Политика конфиденциальности</a>
         </footer>
     );
-}
+};

@@ -3,7 +3,7 @@ import ServicesIcon from './icons/services.svg';
 import BooksIcon from './icons/books.svg';
 import ProductIcon from './icons/product.svg';
 import { TopLevelCategory } from "../interfaces/page.interface";
-import {FirstLevelMenuItem} from "../interfaces/menu.interface";
+import { FirstLevelMenuItem } from "../interfaces/menu.interface";
 
 export const firstLevelMenu: FirstLevelMenuItem[] = [
     { route: 'courses', name: 'Курсы', icon: <CoursesIcon/>, id: TopLevelCategory.Courses },

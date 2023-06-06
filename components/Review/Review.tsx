@@ -29,4 +29,4 @@ export const Review = ({ review, className,...props }: ReviewProps): JSX.Element
             </div>
         </div>
     );
-}
+};

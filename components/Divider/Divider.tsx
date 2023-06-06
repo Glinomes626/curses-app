@@ -6,4 +6,4 @@ export const Divider = ({ className, ...props }: DividerProps): JSX.Element => {
     return (
         <hr className={clNa(className, styles.hr)} {...props}/>
     );
-}
+};

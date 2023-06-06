@@ -6,22 +6,28 @@ import clNa from "classnames";
 export const Sort = ({ sort, setSort, className, ...props }: SortProps): JSX.Element => {
     return (
         <div className={clNa(styles.sort, className)} {...props}>
-            <span
+            <div className={styles.sortName} id={"sortRating"}>Сотрировка по рейтингу</div>
+            <div className={styles.sortName} id={"sortPrice"}>Сотрировка по цене</div>
+            <button
                 onClick={() => setSort(SortEnum.Rating)}
                 className={clNa({
                     [styles.active]: sort === SortEnum.Rating
                 })}
+                aria-selected={sort === SortEnum.Rating}
+                aria-labelledby={"sortRating"}
             >
                 <SortIcon className={styles.sortIcon} />По рейтингу
-            </span>
-            <span
+            </button>
+            <button
                 onClick={() => setSort(SortEnum.Price)}
                 className={clNa({
                     [styles.active]: sort === SortEnum.Price
                 })}
+                aria-selected={sort === SortEnum.Price}
+                aria-labelledby={"sortPrice"}
             >
                 <SortIcon className={styles.sortIcon} />По цене
-            </span>
+            </button>
         </div>
     );
-}
+};

@@ -3,3 +3,9 @@
     gap: 20px;
     align-content: start;
 }
+
+@media screen and (max-width: 750px) {
+    .sidebar {
+        display: none;
+    }
+}

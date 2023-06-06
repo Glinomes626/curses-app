@@ -40,7 +40,7 @@
     overflow: hidden;
 }
 
-.thirdLevel {
+.thirdLevel a {
     display: inline-block;
     max-width: 180px;
     margin-bottom: 10px;
@@ -52,6 +52,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     cursor: pointer;
+    outline-offset: -1px;
 }
 
 .thirdLevelActive,
