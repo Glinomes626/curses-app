@@ -1,33 +1,22 @@
 import { GetStaticProps } from "next";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {Button, Htag, Input, Paragraph, Rating, Tag, Textarea} from '../components';
 import { withLayout } from '../layout/Layout';
 import { MenuItem } from '../interfaces/menu.interface';
 import { API } from "../helpers/api";
-
+import styles from "../styles/home.module.css";
+import Category from "../components/Category/Category";
+import { Htag } from "../components";
 
 function Home({ menu }: HomeProps): JSX.Element {
 
     return (
-        <>
-            <Htag tag='h1'>Заголовок</Htag>
-            <Button appearance='primary' arrow='right'>Кнопка</Button>
-            <Button appearance='ghost' arrow={"down"}>Кнопка</Button>
-            <Paragraph size={'small'}>Маленький</Paragraph>
-            <Paragraph>Стандартный</Paragraph>
-            <Paragraph size={'large'}>большой</Paragraph>
-            <Tag size={'small'}>Ghost</Tag>
-            <Tag size={'medium'} color={"red"}>red</Tag>
-            <Tag size={'small'} color={"green"}>green</Tag>
-            <Tag color={"primary"}>green</Tag>
-            <Rating rating={4} isEditable />
-            <ul>
-                {menu.map(m => (<li key={m._id.secondCategory}>{m._id.secondCategory}</li>))}
+        <div>
+            <Htag className={styles.title} tag='h1'>OwlTop - лучший агрегатор онлайн курсов.</Htag>
+            <ul className={styles.courses}>
+                {menu.map(i => <Category key={i._id.secondCategory} category={i}/>)}
             </ul>
-            <Input placeholder='тест'/>
-            <Textarea placeholder='тест area'/>
-        </>
+        </div>
     );
 }
 

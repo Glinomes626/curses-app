@@ -6,12 +6,18 @@ import { MenuItem } from "../../interfaces/menu.interface";
 import { firstLevelMenu } from "../../helpers/helpers";
 import { ParsedUrlQuery } from "node:querystring";
 import { API } from "../../helpers/api";
+import {Htag} from "../../components";
+import styles from "../../styles/home.module.css";
+import Category from "../../components/Category/Category";
 
-function Type({ firstCategory }: TypeProps): JSX.Element {
+function Type({ menu }: TypeProps): JSX.Element {
 
     return (
         <>
-            Type: {firstCategory}
+            <Htag className={styles.title} tag='h1'>Лучшие курсы онлайн.</Htag>
+            <ul className={styles.courses}>
+                {menu.map(i => <Category key={i._id.secondCategory} category={i}/>)}
+            </ul>
         </>
     );
 }
@@ -54,5 +60,5 @@ export const getStaticProps: GetStaticProps<TypeProps> = async ({ params }: GetS
 
 interface TypeProps extends Record<string, unknown> {
     menu: MenuItem[];
-    firstCategory: number;
+    firstCategory: unknown;
 }
