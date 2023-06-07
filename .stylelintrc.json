@@ -7,6 +7,15 @@
     "stylelint-order"
   ],
   "rules": {
-    "color-named": "never"
+    "color-hex-case": "upper",
+    "selector-class-pattern": "^.*$",
+    "declaration-block-no-redundant-longhand-properties": [
+      true,
+      {
+        "ignoreShorthands": [
+          "/grid/"
+        ]
+      }
+    ]
   }
 }

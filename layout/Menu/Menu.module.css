@@ -27,6 +27,8 @@
     color: var(--gray-dark);
     text-transform: uppercase;
     cursor: pointer;
+    background: none;
+    border: none;
 }
 
 .secondBlock {

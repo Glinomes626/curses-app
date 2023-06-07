@@ -22,7 +22,7 @@ export const Header = ({ className ,...props }: HeaderProps): JSX.Element => {
         opened: {
             opacity: 1,
             x: 0,
-            transaction: {
+            transition: {
                 stiffness: 20
             }
         },

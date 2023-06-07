@@ -42,6 +42,8 @@
 
 .advBlock {
     grid-column: middle / end;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 .logo img {
@@ -103,26 +105,18 @@
     margin-right: 20px;
 }
 
-.advBlock {
-    font-size: 16px;
-    line-height: 22px;
-}
-
 .advTitle {
     margin-bottom: 5px;
     font-weight: 700;
 }
 
-.advBlock > * {
-    padding-left: 15px;
-}
-
 .advBlock > *:not(:last-child) {
+    padding-left: 15px;
     margin-bottom: 20px;
 }
 
 .advantages {
-    border-left: 2px solid #1dc37e;
+    border-left: 2px solid #1DC37E;
 }
 
 .disadvantages {

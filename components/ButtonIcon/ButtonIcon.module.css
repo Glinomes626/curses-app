@@ -43,11 +43,11 @@
     background-color: var(--green);
 }
 
-.green svg * {
+.green:hover svg * {
     fill: var(--white);
 }
 
 .green:hover {
-    background-color: #52c0a0;
+    background-color: #52C0A0;
 }
 
