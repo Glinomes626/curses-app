@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import axios from "axios";
 import { withLayout } from '../layout/Layout';
 import { MenuItem } from '../interfaces/menu.interface';
