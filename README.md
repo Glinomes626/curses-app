@@ -1,1 +1,1 @@
-# owl-top-app
+# curses-app
