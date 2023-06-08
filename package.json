@@ -2,6 +2,10 @@
   "name": "curses-app",
   "version": "1.0.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zaluper626/curses-app.git"
+  },
   "scripts": {
     "prepare": "husky install",
     "dev": "next dev",
@@ -43,5 +47,10 @@
     "stylelint-config-standard": "^30.0.1",
     "stylelint-order": "^6.0.2",
     "typescript": "^4.9.5"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "bugs": {
+    "url": "https://github.com/Zaluper626/curses-app/issues"
+  },
+  "homepage": "https://github.com/Zaluper626/curses-app#readme"
 }
