@@ -7,15 +7,16 @@ import ym from 'react-yandex-metrika';
 import { Noto_Sans } from 'next/font/google';
 import { Router } from "next/router";
 
-const notSans = Noto_Sans({
-    subsets: ['latin'],
-    weight: ['300', '400', '500', '700']
-});
 
 Router.events.on('routeChangeComplete', (url: string) => {
     if (typeof window !== 'undefined') {
         ym('hit', url);
     }
+});
+
+const notSans = Noto_Sans({
+    subsets: ['latin'],
+    weight: ['300', '400', '500', '700']
 });
 
 export default function App({ Component, pageProps, router }: AppProps): JSX.Element {

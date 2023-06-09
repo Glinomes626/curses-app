@@ -6,9 +6,6 @@ import { MenuItem } from "../../interfaces/menu.interface";
 import { firstLevelMenu } from "../../helpers/helpers";
 import { ParsedUrlQuery } from "node:querystring";
 import { API } from "../../helpers/api";
-import {Htag} from "../../components";
-import styles from "../../styles/home.module.css";
-import Category from "../../components/Category/Category";
 
 function Type({ firstCategory }: TypeProps): JSX.Element {
 
