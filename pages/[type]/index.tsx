@@ -10,14 +10,11 @@ import {Htag} from "../../components";
 import styles from "../../styles/home.module.css";
 import Category from "../../components/Category/Category";
 
-function Type({ menu }: TypeProps): JSX.Element {
+function Type({ firstCategory }: TypeProps): JSX.Element {
 
     return (
         <>
-            <Htag className={styles.title} tag='h1'>Лучшие курсы онлайн.</Htag>
-            <ul className={styles.courses}>
-                {menu.map(i => <Category key={i._id.secondCategory} category={i}/>)}
-            </ul>
+            type:{firstCategory}
         </>
     );
 }
@@ -60,5 +57,5 @@ export const getStaticProps: GetStaticProps<TypeProps> = async ({ params }: GetS
 
 interface TypeProps extends Record<string, unknown> {
     menu: MenuItem[];
-    firstCategory: unknown;
+    firstCategory: number;
 }
