@@ -4,10 +4,7 @@
 
 .mobileMenu {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     z-index: 10;
     padding: 20px 15px;
     overflow-y: scroll;
@@ -21,7 +18,7 @@
     z-index: 11;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (width <= 750px) {
     .header {
         display: grid;
         grid-template-columns: 1fr 40px;
