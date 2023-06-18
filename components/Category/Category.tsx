@@ -25,4 +25,4 @@ const Category = ({category}: { category: MenuItem }): JSX.Element => {
     );
 };
 
-export default Category
+export default Category;
