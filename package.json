@@ -8,7 +8,7 @@
   },
   "author": "WSP | WebSearchProject",
   "license": "ISC",
-  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "description": "Application project on Next.js",
   "bugs": {
     "url": "https://github.com/Zaluper626/curses-app/issues"
   },
